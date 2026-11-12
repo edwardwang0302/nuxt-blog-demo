@@ -1,0 +1,14 @@
+.git
+.github
+docs
+infra
+**/node_modules
+**/.nuxt
+**/.output
+**/test-results
+**/playwright-report
+**/blob-report
+**/*.log
+.env
+.env.*
+.DS_Store

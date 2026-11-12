@@ -1,0 +1,19 @@
+// 共享 mixin。只放跨组件复用的布局与可访问性规则。
+@use './tokens' as tokens;
+
+@mixin media-up($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin media-down($breakpoint) {
+  @media (max-width: ($breakpoint - 1px)) {
+    @content;
+  }
+}
+
+@mixin focus-ring {
+  outline: tokens.$focus-ring-width solid var(--color-focus-ring);
+  outline-offset: tokens.$focus-ring-offset;
+}

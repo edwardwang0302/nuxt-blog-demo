@@ -1,0 +1,62 @@
+// 颜色 token：以 CSS 自定义属性声明，支持运行时切换亮暗主题。
+// 组件不得直接使用十六进制或 rgba 颜色，统一引用 var(--color-*)。
+// 来源：docs/design-tokens.md
+
+@mixin dark-tokens {
+  color-scheme: dark;
+
+  --color-bg: #111316;
+  --color-fg: #f2f3f5;
+  --color-fg-muted: #abb1bb;
+  --color-surface: #181c21;
+  --color-surface-hover: rgb(255 255 255 / 8%);
+  --color-border: #3b414a;
+  --color-tag-bg: rgb(255 255 255 / 6%);
+  --color-tag-bg-selected: rgb(255 255 255 / 18%);
+  --color-tag-fg: #f2f3f5;
+  --color-tag-border: rgb(255 255 255 / 12%);
+  --color-control-bg-primary: rgb(255 255 255 / 18%);
+  --color-control-bg-primary-hover: rgb(255 255 255 / 24%);
+  --color-control-bg-secondary: rgb(255 255 255 / 4%);
+  --color-control-bg-secondary-hover: rgb(255 255 255 / 10%);
+  --color-control-border: rgb(255 255 255 / 12%);
+  --color-control-border-subtle: rgb(255 255 255 / 12%);
+  --color-focus-ring: rgb(255 255 255 / 72%);
+  --color-status: #a6c5ff;
+  --color-status-bg: rgb(166 197 255 / 12%);
+}
+
+:root {
+  color-scheme: light;
+
+  --color-bg: #fafaf8;
+  --color-fg: #191b1d;
+  --color-fg-muted: #5c6066;
+  --color-surface: #fff;
+  --color-surface-hover: rgb(0 0 0 / 8%);
+  --color-border: #d8dadd;
+  --color-tag-bg: #f0f1ef;
+  --color-tag-bg-selected: rgb(0 0 0 / 18%);
+  --color-tag-fg: #5c6066;
+  --color-tag-border: #d8dadd;
+  --color-control-bg-primary: rgb(0 0 0 / 18%);
+  --color-control-bg-primary-hover: rgb(0 0 0 / 24%);
+  --color-control-bg-secondary: #fff;
+  --color-control-bg-secondary-hover: rgb(0 0 0 / 10%);
+  --color-control-border: rgb(0 0 0 / 12%);
+  --color-control-border-subtle: #d8dadd;
+  --color-focus-ring: rgb(0 0 0 / 72%);
+  --color-status: #245fad;
+  --color-status-bg: rgb(36 95 173 / 8%);
+}
+
+[data-theme='dark'] {
+  @include dark-tokens;
+}
+
+// 无脚本或主题脚本执行前的系统暗色回退。
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    @include dark-tokens;
+  }
+}

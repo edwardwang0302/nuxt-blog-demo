@@ -1,0 +1,28 @@
+// 全局样式入口。
+@use './tokens' as *;
+@use './themes';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $font-sans;
+  font-size: $text-body-size;
+  line-height: $text-body-line;
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+}
+
+// 全局兜底：尚未接入组件样式的链接和控件也必须有可见焦点。
+:focus-visible {
+  outline: $focus-ring-width solid var(--color-focus-ring);
+  outline-offset: $focus-ring-offset;
+}

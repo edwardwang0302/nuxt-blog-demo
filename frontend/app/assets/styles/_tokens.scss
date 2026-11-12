@@ -1,0 +1,119 @@
+// Design tokens：编译期常量。
+// 颜色 token 在 _themes.scss 中以 CSS 自定义属性定义，因为它们需要运行时切换。
+// 来源：docs/design-tokens.md
+
+// 字体族
+$font-sans: 'Manrope Variable', 'Noto Sans SC Variable', system-ui, sans-serif;
+$font-mono: 'Geist Mono Variable', ui-monospace, 'SFMono-Regular', menlo, monospace;
+
+// 字重
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// 字号阶梯
+$font-size-12: 12px;
+$font-size-13: 13px;
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-18: 18px;
+$font-size-20: 20px;
+$font-size-22: 22px;
+$font-size-24: 24px;
+$font-size-32: 32px;
+$font-size-44: 44px;
+$font-size-48: 48px;
+$font-size-64: 64px;
+
+// 行高阶梯
+$line-height-19: 19px;
+$line-height-21: 21px;
+$line-height-22: 22px;
+$line-height-26: 26px;
+$line-height-30: 30px;
+$line-height-32: 32px;
+$line-height-36: 36px;
+$line-height-40: 40px;
+$line-height-42: 42px;
+$line-height-57: 57px;
+$line-height-62: 62px;
+$line-height-80: 80px;
+
+// 语义文字样式：字号与行高成对使用
+$text-display-size: $font-size-64;
+$text-display-line: $line-height-80;
+$text-h1-page-size: $font-size-48;
+$text-h1-page-line: $line-height-62;
+$text-h1-article-size: $font-size-44;
+$text-h1-article-line: $line-height-57;
+$text-h2-section-size: $font-size-32;
+$text-h2-section-line: $line-height-40;
+$text-h2-page-size: $font-size-32;
+$text-h2-page-line: $line-height-42;
+$text-h2-article-size: $font-size-24;
+$text-h2-article-line: $line-height-40;
+$text-subtitle-size: $font-size-22;
+$text-subtitle-line: $line-height-36;
+$text-card-title-size: $font-size-20;
+$text-card-title-line: $line-height-30;
+$text-logo-size: $font-size-20;
+$text-logo-line: $line-height-32;
+$text-body-lg-size: $font-size-18;
+$text-body-lg-line: $line-height-32;
+$text-body-lg-about-size: $font-size-18;
+$text-body-lg-about-line: $line-height-30;
+$text-body-md-size: $font-size-16;
+$text-body-md-line: $line-height-26;
+$text-body-size: $font-size-14;
+$text-body-line: $line-height-22;
+$text-label-size: $font-size-14;
+$text-label-line: $line-height-22;
+$text-meta-size: $font-size-12;
+$text-meta-line: $line-height-19;
+$text-code-size: $font-size-13;
+$text-code-line: $line-height-21;
+
+// 组件内边距
+$space-4: 4px;
+$space-10: 10px;
+$space-12: 12px;
+
+// 间距阶梯
+$space-8: 8px;
+$space-16: 16px;
+$space-24: 24px;
+$space-32: 32px;
+$space-48: 48px;
+$space-64: 64px;
+$space-96: 96px;
+
+// 圆角与描边
+$radius-8: 8px;
+$border-1: 1px;
+
+// 组件尺寸
+$control-height: 44px;
+$card-min-height: 336px;
+
+// 焦点样式
+$focus-ring-width: 2px;
+$focus-ring-offset: 2px;
+
+// 断点
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-wide: 1440px;
+
+// 容器与边距
+$container-mobile: 342px;
+$container-tablet: 704px;
+$container-desktop: 928px;
+$container-wide: 1200px;
+$gutter-mobile: 24px;
+$gutter-tablet: 32px;
+$gutter-desktop: 48px;
+$gutter-wide: 120px;
+
+// 正文最大宽度
+$content-width: 720px;
